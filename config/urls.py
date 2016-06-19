@@ -7,6 +7,11 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
+from django.utils.translation import ugettext_lazy as _
+
+admin.site.site_title = _('Polls Admin')
+admin.site.site_header = _('Django Polls')
+admin.site.index_title = _('Site Administration')
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
