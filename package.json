@@ -1,7 +1,7 @@
 {
   "name": "django_polls",
   "version": "0.0.0",
-  "dependencies": { },
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.12.10",
     "del": "^2.2.0",
@@ -20,5 +20,28 @@
   },
   "engines": {
     "node": ">=0.8.0"
-  }
+  },
+  "description": "django polls ============",
+  "main": " ",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bionikspoon/django_polls.git"
+  },
+  "keywords": [
+    "Manu Phatak",
+    "django",
+    "polls"
+  ],
+  "author": "Manu Phatak <bionikspoon@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bionikspoon/django_polls/issues"
+  },
+  "homepage": "https://github.com/bionikspoon/django_polls#readme"
 }
