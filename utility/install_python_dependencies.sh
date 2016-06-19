@@ -41,4 +41,3 @@ else
     pip install -r $PROJECT_DIR/requirements/test.txt
     pip install -r $PROJECT_DIR/requirements.txt
 fi
-

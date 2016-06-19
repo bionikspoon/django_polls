@@ -21,7 +21,7 @@ TEMPLATES[0]['OPTIONS']['debug'] = DEBUG
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 # Note: This key only used for development and testing.
-SECRET_KEY = env('DJANGO_SECRET_KEY', default='xdaq=i@*56w19n7itvm61dt8h!p8m3o=mef!o2r9mghlt8-%+5')
+SECRET_KEY = env('DJANGO_SECRET_KEY', default='secret')
 
 # Mail settings
 # ------------------------------------------------------------------------------
@@ -29,7 +29,6 @@ SECRET_KEY = env('DJANGO_SECRET_KEY', default='xdaq=i@*56w19n7itvm61dt8h!p8m3o=m
 EMAIL_PORT = 1025
 
 EMAIL_HOST = env("EMAIL_HOST", default='mailhog')
-
 
 # CACHING
 # ------------------------------------------------------------------------------
@@ -43,24 +42,22 @@ CACHES = {
 # django-debug-toolbar
 # ------------------------------------------------------------------------------
 MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
-INSTALLED_APPS += ('debug_toolbar', )
+INSTALLED_APPS += ('debug_toolbar',)
 
 INTERNAL_IPS = ['127.0.0.1', '10.0.2.2', ]
 # tricks to have debug toolbar when developing with docker
 if os.environ.get('USE_DOCKER') == 'yes':
     ip = socket.gethostbyname(socket.gethostname())
-    INTERNAL_IPS += [ip[:-1]+"1"]
+    INTERNAL_IPS += [ip[:-1] + "1"]
 
 DEBUG_TOOLBAR_CONFIG = {
-    'DISABLE_PANELS': [
-        'debug_toolbar.panels.redirects.RedirectsPanel',
-    ],
+    'DISABLE_PANELS': ['debug_toolbar.panels.redirects.RedirectsPanel'],
     'SHOW_TEMPLATE_CONTEXT': True,
 }
 
 # django-extensions
 # ------------------------------------------------------------------------------
-INSTALLED_APPS += ('django_extensions', )
+INSTALLED_APPS += ('django_extensions',)
 
 # TESTING
 # ------------------------------------------------------------------------------

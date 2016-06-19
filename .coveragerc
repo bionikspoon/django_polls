@@ -1,5 +1,4 @@
 [run]
 include = django_polls/*
 omit = *migrations*, *tests*
-plugins =
-    django_coverage_plugin
+plugins = django_coverage_plugin
