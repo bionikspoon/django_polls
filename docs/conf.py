@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# coding=utf-8
 #
 # django polls documentation build configuration file, created by
 # sphinx-quickstart.
