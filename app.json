@@ -10,7 +10,7 @@
     },
     "DJANGO_ALLOWED_HOSTS": {
       "description": "Comma-separated list of hosts",
-      "value": ".herokuapp.com"
+      "value": "django-polls.manuphatak.com"
     },
     "DJANGO_ADMIN_URL": {
       "description": "A secret URL for the Django admin",
